@@ -11,6 +11,14 @@ body {
   color: white;
 }
 
+.font-architect {
+  font-family: var(--font-architect-daughter), cursive;
+}
+
+.font-roboto {
+  font-family: var(--font-roboto), cursive;
+}
+
 @theme {
   --color-primary: rgb(104, 189, 162);
 }
