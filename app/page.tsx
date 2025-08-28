@@ -1,11 +1,24 @@
+"use client"
 import React from "react"
 import GridBackground from "./components/GridBackground"
 import PrimarySkill from "./components/PrimarySkill"
 import AdditionalSkill from "./components/AdditionalSkill"
 import GithubArrow from "./components/GithubArrow"
 import { FaArrowDown } from "react-icons/fa"
+import Project from "./components/Project"
+import { projects } from "@/lib/projects"
 
 export default function Home() {
+  const scrollToProjects = () => {
+    const projectsElement = document.getElementById("projects")
+    if (projectsElement) {
+      projectsElement.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      })
+    }
+  }
+
   return (
     <div className="w-full min-h-screen flex flex-col items-center justify-center">
       <GridBackground
@@ -65,7 +78,10 @@ export default function Home() {
           </div>
           {/* Show Projects */}
           <div className="w-full flex items-center justify-center mt-16 mb-10">
-            <button className="flex items-center gap-2 group bg-gray-800/50 backdrop-blur-sm rounded-full p-4 border border-gray-700/50 hover:border-primary/50 transition-all duration-300">
+            <button
+              onClick={scrollToProjects}
+              className="flex items-center gap-2 group bg-gray-800/50 backdrop-blur-sm rounded-full p-4 border border-gray-700/50 hover:border-primary/50 transition-all duration-300 cursor-pointer"
+            >
               <FaArrowDown className="text-gray-400 group-hover:text-primary transition-color duration-300" />
               <p className="text-gray-400 group-hover:text-primary transition-color duration-300">
                 Show Projects
@@ -74,6 +90,22 @@ export default function Home() {
           </div>
         </div>
       </GridBackground>
+      {/* Projects */}
+      <div
+        id="projects"
+        className="w-full bg-background flex items-center justify-center flex-col"
+      >
+        <div className="w-full h-1 bg-primary/50" />
+        <h2 className="text-primary font-roboto text-4xl font-medium text-center mt-5">
+          Projects
+        </h2>
+        <div className="w-full flex items-center justify-center space-y-10 flex-col">
+          {projects &&
+            projects.map((project, key) => {
+              return <Project place={key} key={key} project={project} />
+            })}
+        </div>
+      </div>
     </div>
   )
 }
