@@ -22,6 +22,18 @@ export default function Chapter({
             return <TechnologyBadge src={technology} key={key} />
           })}
       </div>
+      <div className="flex items-center justify-center gap-3 flex-wrap">
+        {project.tags.map((word, key) => {
+          return (
+            <div
+              className="cursor-default border-2 text-primary border-primary py-1 px-2 hover:text-white hover:shadow-lg hover:shadow-primary/20 hover:scale-106 hover:bg-primary rounded-full transition-all duration-300"
+              key={key}
+            >
+              <p>{word}</p>
+            </div>
+          )
+        })}
+      </div>
       <div className="w-full flex items-center justify-center space-x-10">
         {project.githubLink && (
           <a

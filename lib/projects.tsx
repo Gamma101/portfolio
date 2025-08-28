@@ -5,11 +5,12 @@ export type ProjectType = {
   youtubeLink?: string
   githubLink?: string
   image?: string
+  tags: string[]
 }
 
 export const projects: ProjectType[] = [
   {
-    title: "📚 Chapter",
+    title: "Chapter",
     description: (
       <p>
         <span className="text-primary font-semibold">Chapter</span> is a reading
@@ -34,6 +35,14 @@ export const projects: ProjectType[] = [
     youtubeLink: "https://www.youtube.com/watch?v=ALuSnsIvsb8",
     githubLink: "https://github.com/Gamma101/chapter",
     image: "/chapter-screen.png",
+    tags: [
+      "TypeScript",
+      "Custom Hooks",
+      "Axios",
+      "JWT",
+      "Responsive Design",
+      "Skeleton Loading",
+    ],
   },
   {
     title: "ToDoosh",
@@ -58,6 +67,7 @@ export const projects: ProjectType[] = [
     ],
     githubLink: "https://github.com/Gamma101/todoosh",
     image: "/todoosh-screen.png",
+    tags: ["React Native", "Expo", "TypeScript", "Themeing", "AsyncStorage"],
   },
   {
     title: "web-chat",
@@ -82,6 +92,7 @@ export const projects: ProjectType[] = [
     githubLink: "https://github.com/Gamma101/todoosh",
     youtubeLink: "https://youtu.be/7rrrAATh4jk",
     image: "/web-chat-screen.png",
+    tags: ["TypeScript", "Real-Time", "Supabase", "Auth"],
   },
   {
     title: "Bookulus",
@@ -104,5 +115,6 @@ export const projects: ProjectType[] = [
     githubLink: "https://github.com/Gamma101/bookulus",
     youtubeLink: "https://youtube.com/shorts/Bc-v3MOpRmY",
     image: "/bookulus-screen.png",
+    tags: ["React Native", "Expo", "EpubJS"],
   },
 ]
