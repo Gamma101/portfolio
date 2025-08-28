@@ -1,55 +1,66 @@
 import Image from "next/image"
 import React from "react"
+import GridBackground from "./components/GridBackground"
+import PrimarySkill from "./components/PrimarySkill"
+import AdditionalSkill from "./components/AdditionalSkill"
 
 export default function Home() {
   return (
-    <div className="w-full flex flex-col items-center justify-center">
-      <header className="w-full absolute top-0 left-0">
-        <p>Danil Olenberger</p>
-      </header>
-      <div className="bg-gray-50 w-full flex justify-center flex-col sm:p-10">
-        <h1>React Frontend Developer</h1>
-        <p>
-          Hi, my name is Danil Olenberger and I&apos;m a passionate React
-          frontend developer
-        </p>
-        <div>
-          <p>My tech stack</p>
-          <div className="flex items-center space-x-2">
-            <p>Main skills:</p>
-            <Image src="js.svg" width={40} height={40} alt="Java Script" />
-            <Image src="html5.svg" width={40} height={40} alt="HTML5" />
-            <Image src="css3.svg" width={40} height={40} alt="CSS3" />
-            <Image src="react.svg" width={40} height={40} alt="React" />
-            <Image src="nodejs.svg" width={40} height={40} alt="NodeJS" />
-            <Image src="nextjs2.svg" width={40} height={40} alt="NextJS" />
-            <Image
-              src="tailwindcss.svg"
-              width={40}
-              height={40}
-              alt="TailwindCSS"
-            />
-            <Image
-              src="shadcnui.svg"
-              width={40}
-              height={40}
-              alt="TailwindCSS"
-            />
-          </div>
-          <div className="flex items-center ">
-            <p>Secondary skills:</p>
-            <Image
-              src="postgresql.svg"
-              width={40}
-              height={40}
-              alt="PostgreSQL"
-            />
-            <Image src="expressjs.svg" width={40} height={40} alt="ExpressJS" />
-            <Image src="supabase.svg" width={40} height={40} alt="Supabase" />
-            <Image src="docker.svg" width={40} height={40} alt="Docker" />
+    <div className="w-full h-screen flex flex-col items-center justify-center">
+      <GridBackground
+        gridSize={30}
+        gridColor="rgba(104, 189, 162, 0.2)"
+        backgroundColor="#1b1b1b"
+      >
+        <div className="w-full h-screen flex justify-center flex-col sm:p-10 items-center">
+          <h1 className="text-[130px]">
+            Danil <span className="text-primary">Olenberger</span>
+          </h1>
+          <p className="text-4xl w-[50%] text-center">
+            {"{"} <span className="text-primary">Frontend </span>Developer {"}"}
+          </p>
+
+          <div className="mt-12 w-full max-w-4xl">
+            <h2 className="text-3xl font-bold text-center mb-8 text-primary">
+              Skills & Technologies
+            </h2>
+
+            {/* Primary Skills */}
+            <div className="mb-8">
+              <h3 className="text-xl font-semibold text-center mb-6 text-gray-300">
+                Primary Skills
+              </h3>
+              <div className="flex flex-wrap justify-center gap-6">
+                <PrimarySkill name="JavaScript" src="js.svg" />
+                <PrimarySkill name="HTML5" src="html5.svg" />
+                <PrimarySkill name="CSS3" src="css3.svg" />
+                <PrimarySkill name="React" src="react.svg" />
+                <PrimarySkill name="Node.js" src="nodejs.svg" />
+                <PrimarySkill name="Git" src="git.svg" />
+              </div>
+            </div>
+
+            {/* Secondary Skills */}
+            <div>
+              <h3 className="text-xl font-semibold text-center mb-6 text-gray-400">
+                Additional Technologies
+              </h3>
+              <div className="flex flex-wrap justify-center gap-4">
+                <AdditionalSkill name="Express.js" src="expressjs.svg" />
+                <AdditionalSkill name="PostgreSQL" src="postgresql.svg" />
+                <AdditionalSkill name="Docker" src="docker.svg" />
+                <AdditionalSkill name="Supabase" src="supabase.svg" />
+                <AdditionalSkill name="Next.js" src="nextjs2.svg" />
+                <AdditionalSkill name="Tailwind" src="tailwindcss.svg" />
+                <AdditionalSkill name="shadcn/ui" src="shadcnui.svg" />
+                <AdditionalSkill name="React Native" src="react.svg" />
+                <AdditionalSkill name="Expo" src="expo.svg" />
+              </div>
+            </div>
+            {/* Links */}
           </div>
         </div>
-      </div>
+      </GridBackground>
     </div>
   )
 }

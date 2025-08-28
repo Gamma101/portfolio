@@ -3,8 +3,14 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --color-primary: rgb(104, 189, 162);
 }
 
 body {
   background-color: #fff;
+  color: white;
+}
+
+@theme {
+  --color-primary: rgb(104, 189, 162);
 }
