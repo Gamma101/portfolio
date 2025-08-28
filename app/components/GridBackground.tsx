@@ -23,7 +23,7 @@ const GridBackground: React.FC<GridBackgroundProps> = ({
   }
 
   return (
-    <div className="w-full h-full" style={gridStyle}>
+    <div className="w-full min-h-full" style={gridStyle}>
       {children}
     </div>
   )

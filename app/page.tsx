@@ -7,13 +7,13 @@ import { FaArrowDown } from "react-icons/fa"
 
 export default function Home() {
   return (
-    <div className="w-full h-screen flex flex-col items-center justify-center">
+    <div className="w-full min-h-screen flex flex-col items-center justify-center">
       <GridBackground
         gridSize={30}
         gridColor="rgba(104, 189, 162, 0.2)"
         backgroundColor="#1b1b1b"
       >
-        <div className="w-full h-screen flex justify-center flex-col mt-20 lg:mt-0 sm:p-10 items-center">
+        <div className="w-full min-h-screen flex justify-center flex-col mt-30 md:mt-20 sm:p-10 items-center py-10">
           <h1 className="text-center text-[50px] md:text-[80px] lg:text-[120px] relative font-roboto">
             <div className="absolute left-50 -top-10">
               <GithubArrow />
@@ -64,10 +64,12 @@ export default function Home() {
             </div>
           </div>
           {/* Show Projects */}
-          <div className="w-full flex items-center justify-center">
-            <button className="absolute mt-40 flex items-center gap-2 bg-gray-800/50 backdrop-blur-sm rounded-full p-4 border border-gray-700/50 hover:border-primary/50 transition-all duration-300 hover:text-primary">
-              <FaArrowDown />
-              Show Projects
+          <div className="w-full flex items-center justify-center mt-16 mb-10">
+            <button className="flex items-center gap-2 group bg-gray-800/50 backdrop-blur-sm rounded-full p-4 border border-gray-700/50 hover:border-primary/50 transition-all duration-300">
+              <FaArrowDown className="text-gray-400 group-hover:text-primary transition-color duration-300" />
+              <p className="text-gray-400 group-hover:text-primary transition-color duration-300">
+                Show Projects
+              </p>
             </button>
           </div>
         </div>

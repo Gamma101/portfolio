@@ -3,9 +3,7 @@ import {
   Architects_Daughter,
   Geist,
   Geist_Mono,
-  Montserrat,
   Roboto,
-  Rubik,
 } from "next/font/google"
 import "./globals.css"
 
