@@ -35,4 +35,74 @@ export const projects: ProjectType[] = [
     githubLink: "https://github.com/Gamma101/chapter",
     image: "/chapter-screen.png",
   },
+  {
+    title: "ToDoosh",
+    description: (
+      <p>
+        <span className="text-primary font-semibold">ToDoosh</span> is a mobile
+        note taking app. It uses{" "}
+        <span className="text-primary font-semibold">React Native</span> &{" "}
+        <span className="text-primary font-semibold">Expo</span>, It has basic
+        CRUD operations with{" "}
+        <span className="text-primary font-semibold">AsyncStorage</span> as
+        database. Also this ToDoosh{" "}
+        <span className="text-primary font-semibold">supports theming</span>,
+        that depends on your system preferences.
+      </p>
+    ),
+    technologies: [
+      "/typescript.svg",
+      "/react-native.svg",
+      "/expo.svg",
+      "/tailwindcss.svg",
+    ],
+    githubLink: "https://github.com/Gamma101/todoosh",
+    image: "/todoosh-screen.png",
+  },
+  {
+    title: "web-chat",
+    description: (
+      <p>
+        <span className="text-primary font-semibold">web-chat</span> is a
+        website for chatting. It uses{" "}
+        <span className="text-primary font-semibold">React</span> &{" "}
+        <span className="text-primary font-semibold">Next.js</span>, and{" "}
+        <span className="text-primary font-semibold">Supabase</span> as database
+        with event{" "}
+        <span className="text-primary font-semibold">subscriptions</span> for{" "}
+        <span className="text-primary font-semibold">Real-Time</span> chatting.
+      </p>
+    ),
+    technologies: [
+      "/typescript.svg",
+      "/nextjs2.svg",
+      "/tailwindcss.svg",
+      "/supabase.svg",
+    ],
+    githubLink: "https://github.com/Gamma101/todoosh",
+    youtubeLink: "https://youtu.be/7rrrAATh4jk",
+    image: "/web-chat-screen.png",
+  },
+  {
+    title: "Bookulus",
+    description: (
+      <p>
+        <span className="text-primary font-semibold">Bookulus</span> is a mobile
+        app for reading books. It uses{" "}
+        <span className="text-primary font-semibold">React Native</span> with{" "}
+        <span className="text-primary font-semibold">Expo</span> components, and{" "}
+        <span className="text-primary font-semibold">AsyncStorage</span> as
+        database.
+      </p>
+    ),
+    technologies: [
+      "/js.svg",
+      "/react-native.svg",
+      "/expo.svg",
+      "/tailwindcss.svg",
+    ],
+    githubLink: "https://github.com/Gamma101/bookulus",
+    youtubeLink: "https://youtube.com/shorts/Bc-v3MOpRmY",
+    image: "/bookulus-screen.png",
+  },
 ]

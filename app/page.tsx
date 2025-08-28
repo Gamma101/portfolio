@@ -76,7 +76,7 @@ export default function Home() {
           </div>
           <div className="pt-10">
             <a
-              className="flex items-center gap-2 text-2xl justify-center mb-4 text-gray-400 hover:text-primary duration-300 transition-all hover:shadow-primary"
+              className="flex items-center gap-2 text-2xl justify-center text-gray-400 hover:text-primary duration-300 transition-colors wave-underline"
               href="mailto:danilolenberger@gmail.com"
             >
               <MdEmail size={30} /> danilolenberger@gmail.com
@@ -105,7 +105,7 @@ export default function Home() {
         <h2 className="text-primary font-roboto text-4xl font-medium text-center mt-5">
           Projects
         </h2>
-        <div className="w-full flex items-center justify-center space-y-10 flex-col">
+        <div className="w-full flex items-center justify-center space-y-3 flex-col">
           {projects &&
             projects.map((project, key) => {
               return <Project place={key} key={key} project={project} />

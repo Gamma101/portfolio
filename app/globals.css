@@ -23,6 +23,60 @@ body {
   font-family: var(--font-roboto), cursive;
 }
 
+/* Анимация волны для email */
+.wave-underline {
+  position: relative;
+  overflow: hidden;
+  padding-bottom: 4px;
+}
+
+.wave-underline::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgb(104, 189, 162) 30%,
+    rgb(104, 189, 162) 70%,
+    transparent 100%
+  );
+  transform: translateX(-100%);
+  transition: transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  border-radius: 2px;
+}
+
+.wave-underline:hover::after {
+  transform: translateX(0);
+}
+
+/* Второй слой волны для более плавного эффекта */
+.wave-underline::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 120%;
+  height: 2px;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(104, 189, 162, 0.4) 40%,
+    rgba(104, 189, 162, 0.6) 60%,
+    transparent 100%
+  );
+  transform: translateX(-110%);
+  transition: transform 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.2s;
+  border-radius: 1px;
+}
+
+.wave-underline:hover::before {
+  transform: translateX(0);
+}
+
 @theme {
   --color-primary: rgb(104, 189, 162);
   --color-background: #1b1b1b;

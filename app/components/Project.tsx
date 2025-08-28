@@ -44,12 +44,21 @@ export default function Chapter({
           </a>
         )}
       </div>
+      {project.image && (
+        <Image
+          src={project.image}
+          className="block lg:hidden rounded-2xl border-2 m-auto shadow-black/50 shadow-xl"
+          height={500}
+          width={500}
+          alt="chapter welcome page"
+        />
+      )}
     </div>
   )
   const imagePart = project.image ? (
     <Image
       src={project.image}
-      className="rounded-2xl border-2 border-primary"
+      className="hidden lg:block rounded-2xl border-2  m-auto shadow-black/50 shadow-xl"
       height={500}
       width={500}
       alt="chapter welcome page"
@@ -59,7 +68,7 @@ export default function Chapter({
   )
 
   return (
-    <div className="w-[70%] block lg:flex mt-10 items-center justify-center space-x-10">
+    <div className="w-[70%] block lg:flex mt-10 items-center justify-center space-x-10 p-5 border-2 border-[#2f2f2f] bg-[#212121] shadow-2xl shadow-black/20 rounded-lg hover:border-primary hover:scale-105 hover:shadow-2xl hover:shadow-primary/10 transition-all duration-500">
       {place % 2 !== 0 ? infoPart : imagePart}
       {place % 2 !== 0 ? imagePart : infoPart}
     </div>
