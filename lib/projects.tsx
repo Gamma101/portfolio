@@ -25,6 +25,7 @@ export const projects: ProjectType[] = [
       </p>
     ),
     technologies: [
+      "/typescript.svg",
       "/nextjs2.svg",
       "/react.svg",
       "/shadcnui.svg",

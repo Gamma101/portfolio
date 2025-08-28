@@ -7,6 +7,7 @@ import GithubArrow from "./components/GithubArrow"
 import { FaArrowDown } from "react-icons/fa"
 import Project from "./components/Project"
 import { projects } from "@/lib/projects"
+import { MdEmail } from "react-icons/md"
 
 export default function Home() {
   const scrollToProjects = () => {
@@ -39,10 +40,6 @@ export default function Home() {
           </p>
 
           <div className="mt-12 w-full max-w-4xl px-4">
-            <h2 className="text-2xl sm:text-3xl font-semibold text-center mb-8 text-primary">
-              Skills & Technologies
-            </h2>
-
             {/* Primary Skills */}
             <div className="mb-8">
               <h3 className="text-lg sm:text-xl font-semibold text-center mb-6 text-gray-300">
@@ -50,6 +47,7 @@ export default function Home() {
               </h3>
               <div className="flex flex-wrap justify-center gap-6">
                 <PrimarySkill name="JavaScript" src="js.svg" />
+                <PrimarySkill name="TypeScript" src="typescript.svg" />
                 <PrimarySkill name="HTML5" src="html5.svg" />
                 <PrimarySkill name="CSS3" src="css3.svg" />
                 <PrimarySkill name="React" src="react.svg" />
@@ -75,6 +73,14 @@ export default function Home() {
                 <AdditionalSkill name="Expo" src="expo.svg" />
               </div>
             </div>
+          </div>
+          <div className="pt-10">
+            <a
+              className="flex items-center gap-2 text-2xl justify-center mb-4 text-gray-400 hover:text-primary duration-300 transition-all hover:shadow-primary"
+              href="mailto:danilolenberger@gmail.com"
+            >
+              <MdEmail size={30} /> danilolenberger@gmail.com
+            </a>
           </div>
           {/* Show Projects */}
           <div className="w-full flex items-center justify-center mt-16 mb-10">
