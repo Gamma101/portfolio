@@ -8,6 +8,7 @@ import { FaArrowDown } from "react-icons/fa"
 import Project from "./components/Project"
 import { projects } from "@/lib/projects"
 import { MdEmail } from "react-icons/md"
+import Image from "next/image"
 
 export default function Home() {
   const scrollToProjects = () => {
@@ -22,6 +23,14 @@ export default function Home() {
 
   return (
     <div className="w-full min-h-screen flex flex-col items-center justify-center">
+      <Image
+        className="absolute top-0 left-10"
+        src="/logo.png"
+        height={50}
+        width={70}
+        alt="logo"
+      />
+
       <GridBackground
         gridSize={30}
         gridColor="rgba(104, 189, 162, 0.2)"
